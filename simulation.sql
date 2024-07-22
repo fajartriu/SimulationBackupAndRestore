@@ -81,21 +81,21 @@ GO
 
 --Restore Differential 
 -- Restore Differential Backup
-RESTORE DATABASE TestDB
+RESTORE DATABASE Simulation
 FROM DISK = 'B:\SQL\TestDB_Diff.bak'
 WITH NORECOVERY;
 GO
 
 --Restore Transaction Log
 -- Restore Transaction Log Backup
-RESTORE LOG TestDB
+RESTORE LOG Simulation
 FROM DISK = 'B:\SQL\TestDB_Log.trn'
 WITH RECOVERY;
 GO
 
 -- Verify the restore data
 -- Use the restored database
-USE TestDB;
+USE Simulation;
 GO
 
 -- Select data to verify restoration
